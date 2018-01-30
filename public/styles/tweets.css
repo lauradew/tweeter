@@ -1,0 +1,61 @@
+article {
+  margin: auto;
+  margin-top: 1em;
+  width: 80%;
+  background-color: #FFF;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  color: #234751;
+}
+
+article header {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #f3f3f3;
+  width: 100%;
+  height: 67px;
+  /*display: inline-block;*/
+}
+
+article p {
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+article img {
+  display: inline-block;
+  border-radius: 8px;
+  margin: .5em;
+  width: 50px;
+  height: 50px;
+}
+
+article #usersName {
+  padding-left: 0;
+  margin-top: .5em;
+  vertical-align: top;
+  color: #657e85;
+  font-weight: 700;
+  font-size: 150%;
+}
+
+article #userID {
+  float: right;
+  margin-top: 1em;
+  color: #a1a1a1;
+  font-weight: 300;
+  font-size: 95%;
+}
+
+article #tweettext {
+  min-height: 50px;
+}
+
+article footer {
+  padding-left: 2px;
+  padding-right: 2px;
+  border-top: 1px solid #d8d8d8;
+  font-size: 80%;
+  max-height: 40px;
+}
