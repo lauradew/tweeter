@@ -1,11 +1,11 @@
 $(document).ready(function() {
-  $(".textarea").keyup(function() {
+  $("#textarea").keyup(function() {
     console.log($(this));
-    $(".counter").text(140 - $(this).val().length);
+    $("#counter").text(140 - $(this).val().length);
     if ($(this).val().length > 140) {
-      $(".counter").addClass("negative");
+      $("#counter").addClass("negative");
     } else {
-      $(".counter").removeClass("negative");
+      $("#counter").removeClass("negative");
     }
   })
 });
