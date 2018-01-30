@@ -22,3 +22,7 @@
 .new-tweet .counter {
   float: right;
 }
+
+.negative {
+  color: red;
+}
