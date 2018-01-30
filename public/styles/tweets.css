@@ -1,27 +1,36 @@
 article {
+  opacity: .7;
   margin: auto;
   margin-top: 1em;
   width: 80%;
   background-color: #FFF;
-  border: 1px solid #d8d8d8;
+  /*border: 1px solid #d8d8d8;*/
+  border: 1px solid #757575;
   border-radius: 8px;
   color: #234751;
 }
 
-article header {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-color: #f3f3f3;
-  width: 100%;
-  height: 67px;
-  /*display: inline-block;*/
+article:hover {
+  opacity: 1;
 }
 
 article p {
   display: inline-block;
   padding-left: 1em;
   padding-right: 1em;
+
 }
+
+article header {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  /*background-color: #f3f3f3;*/
+  background-color: #eeeeee;
+  width: 100%;
+  height: 67px;
+  /*display: inline-block;*/
+}
+
 
 article img {
   display: inline-block;
@@ -35,10 +44,12 @@ article #usersName {
   padding-left: 0;
   margin-top: .5em;
   vertical-align: top;
-  color: #657e85;
+  /*color: #657e85;*/
+  color: #234751;
   font-weight: 700;
   font-size: 150%;
 }
+
 
 article #userID {
   float: right;
@@ -49,7 +60,8 @@ article #userID {
 }
 
 article #tweettext {
-  min-height: 50px;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 article footer {
@@ -59,3 +71,4 @@ article footer {
   font-size: 80%;
   max-height: 40px;
 }
+
