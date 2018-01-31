@@ -14,7 +14,7 @@ article:hover {
   opacity: 1;
 }
 
-article:hover #icons {
+article:hover p.icons {
   visibility: visible;
 }
 
@@ -26,6 +26,7 @@ article p {
 }
 
 article header {
+  position: relative;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   /*background-color: #f3f3f3;*/
@@ -36,7 +37,7 @@ article header {
 }
 
 
-article img {
+img.userAv {
   display: inline-block;
   border-radius: 8px;
   margin: .5em;
@@ -44,7 +45,7 @@ article img {
   height: 50px;
 }
 
-article #usersName {
+p.fullName {
   padding-left: 0;
   margin-top: .5em;
   vertical-align: top;
@@ -55,15 +56,16 @@ article #usersName {
 }
 
 
-article #userID {
-  float: right;
+p.userat {
+  position: absolute;
+  right: 0;
   margin-top: 1em;
   color: #a1a1a1;
   font-weight: 300;
   font-size: 95%;
 }
 
-article #tweettext {
+p.content {
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -76,7 +78,7 @@ article footer {
   max-height: 40px;
 }
 
-article #icons {
+p.icons {
   float: right;
   visibility: hidden;
 }

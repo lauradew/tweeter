@@ -29,7 +29,8 @@ main {
   margin: auto;
   padding-top: 140px;
   width: 450px;
-  height: 1000px;
+  height: auto;
+  padding-bottom: 140px;
   color: grey;
   background-color: white;
 }
