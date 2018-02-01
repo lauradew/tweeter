@@ -82,7 +82,8 @@ $('.new-tweet form').on('submit', function(e) {
   var newest = $('.new-tweet form').serialize();
 
   $.post('/tweets', newest).done(function() {
-    $('.new-tweet form').attr('value', $('.placeholder'));
+    $('.textarea').val("");
+    $('.counter').text("140");
     loadTweets();
 
     // load that tweet into the view
