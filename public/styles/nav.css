@@ -21,3 +21,20 @@
   font-size: 32px;
   margin-left: 10px;
 }
+
+#nav-bar .button {
+  float: right;
+  margin-top: 10px;
+  line-height: 2.5;
+  height: 60px;
+  border-radius: 8px;
+  background-color: #e8fdff;
+  color: #00a087;
+  border-color: black;
+}
+
+#nav-bar .button:hover {
+  background-color: white;
+  border: 1px solid #d2d3d3;
+  cursor: pointer;
+}
