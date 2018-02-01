@@ -117,20 +117,12 @@ function loadTweets() {
 //     method: 'POST',
 //     success: function(result) {
 
-//       if ($('.new-tweet form') === null ||
-//         $('.new-tweet form').length > 140) {
-//         alert("Tweet must be less than 140 characters.");
-//       return;
-//       } else {
-
 
 //       easyTweet(result);
 //       }
 //     }
 //   })
 // }
-
-
 
 
 
