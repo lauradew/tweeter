@@ -7,51 +7,51 @@
 
 //same functionality as easytweet with more tedious formatting
 //more secure but still missing aria-hidden
-// function createTweetElement(tweetObject) {
+function createTweetElement(tweetObject) {
 
-//   const header = $("<header>");
-//   const article = $("<article>");
-//   const footer = $("<footer>");
+  const header = $("<header>");
+  const article = $("<article>");
+  const footer = $("<footer>");
 
-//   const avatar = $("<img>").addClass("userAv");
-//   const name = $("<p>").addClass("fullName");
-//   const tag = $("<p>").addClass("userat");
+  const avatar = $("<img>").addClass("userAv");
+  const name = $("<p>").addClass("fullName");
+  const tag = $("<p>").addClass("userat");
 
-//   const cont = $("<p>").addClass("content");
+  const cont = $("<p>").addClass("content");
 
-//   const date = $("<p>").addClass("footerText");
+  const date = $("<p>").addClass("footerText");
 
-//   const icon = $("<p>").addClass("icons");
-//   const flag = $("<i>").addClass("fa fa-flag");
-//   const retweer = $("<i>").addClass("fa fa-retweet");
-//   const heart = $("<i>").addClass("fa fa-heart");
+  const icon = $("<p>").addClass("icons");
+  const flag = $("<i>").addClass("fa fa-flag");
+  const retweer = $("<i>").addClass("fa fa-retweet");
+  const heart = $("<i>").addClass("fa fa-heart");
 
-//   const daysAgo = moment(tweetObject.created_at).fromNow();
-
-
-// article.append(header);
-// avatar.attr('src', tweetObject.user.avatars.small);
-// header.append(avatar);
-// name.text(tweetObject.user.name);
-// header.append(name);
-// tag.text(tweetObject.user.handle);
-// header.append(tag);
+  const daysAgo = moment(tweetObject.created_at).fromNow();
 
 
-// cont.text(tweetObject.content.text);
-// article.append(cont);
+article.append(header);
+avatar.attr('src', tweetObject.user.avatars.small);
+header.append(avatar);
+name.text(tweetObject.user.name);
+header.append(name);
+tag.text(tweetObject.user.handle);
+header.append(tag);
 
-// article.append(footer);
-// date.text("Posted " + daysAgo + ".");
-// footer.append(date);
-// footer.append(icon);
-// icon.append(flag);
-// icon.append(retweer);
-// icon.append(heart);
 
-//   console.log(article.html());
-//   return article;
-// }
+cont.text(tweetObject.content.text);
+article.append(cont);
+
+article.append(footer);
+date.text("Posted " + daysAgo + ".");
+footer.append(date);
+footer.append(icon);
+icon.append(flag);
+icon.append(retweer);
+icon.append(heart);
+
+  console.log(article.html());
+  return article;
+}
 //END OF CREATE TWEET ELEMENT FUNCTION
 
 
@@ -63,8 +63,8 @@ $(document).ready(function() {
 
 function renderTweets(tweets) {
   tweets.forEach(function(tweet) {
-    // $('#tweets-container').append(createTweetElement(tweet));
-    $('#tweets-container').prepend(easyTweet(tweet));
+    $('#tweets-container').prepend(createTweetElement(tweet));
+    // $('#tweets-container').prepend(easyTweet(tweet));
   });
 }
 
@@ -133,36 +133,36 @@ function loadTweets() {
 
 
 
-
-function easyTweet(tweetObject) {
-  const htmldata = `
-    <article class="tweet">
-              <header>
-                <img class="userAv" id="userAv" src="${tweetObject.user.avatars.small}">
-                <p class="fullName" id="fullName">
-                  ${tweetObject.user.name}
-                </p>
-                <p class="userat" id="userID">
-                  ${tweetObject.user.handle}
-                </p>
-              </header>
-              <p class="content" id="tweettext">
-                ${tweetObject.content.text}
-              </p>
-              <footer>
-                <p class="footerText" id="footertext">
-                Posted ${moment(tweetObject.created_at).fromNow()}.
-                </p>
-                <p class="icons" id="icons">
-                  <i class="fa fa-flag" aria-hidden="true"></i>
-                  <i class="fa fa-retweet" aria-hidden="true"></i>
-                  <i class="fa fa-heart" aria-hidden="true"></i>
-                </p>
-              </footer>
-            </article>
-    `;
-    return htmldata;
-}
+//less secure function; users can manipulate
+// function easyTweet(tweetObject) {
+//   const htmldata = `
+//     <article class="tweet">
+//               <header>
+//                 <img class="userAv" id="userAv" src="${tweetObject.user.avatars.small}">
+//                 <p class="fullName" id="fullName">
+//                   ${tweetObject.user.name}
+//                 </p>
+//                 <p class="userat" id="userID">
+//                   ${tweetObject.user.handle}
+//                 </p>
+//               </header>
+//               <p class="content" id="tweettext">
+//                 ${tweetObject.content.text}
+//               </p>
+//               <footer>
+//                 <p class="footerText" id="footertext">
+//                 Posted ${moment(tweetObject.created_at).fromNow()}.
+//                 </p>
+//                 <p class="icons" id="icons">
+//                   <i class="fa fa-flag" aria-hidden="true"></i>
+//                   <i class="fa fa-retweet" aria-hidden="true"></i>
+//                   <i class="fa fa-heart" aria-hidden="true"></i>
+//                 </p>
+//               </footer>
+//             </article>
+//     `;
+//     return htmldata;
+// }
 
 
 });
