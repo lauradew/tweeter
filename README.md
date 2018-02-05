@@ -26,5 +26,5 @@ I have initialized the project on Heroku, and will be adding login features in t
 
 ## Screenshots
 
-!["Screenshot of tweeter on empty Heroku site"](https://)
-!["Screenshot of tweeter homepage"](https://)
+!["Screenshot of tweeter homepage"](https://github.com/lauradew/tweeter/blob/master/docs/helloworld.png?raw=true)
+!["Screenshot of tweeter on empty Heroku site"](https://github.com/lauradew/tweeter/blob/master/docs/emptyTweeter.png?raw=true)
