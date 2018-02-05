@@ -8,16 +8,6 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 
-const nodeSass      = require("node-sass-middleware");
-const path          = require("path");
-
-// app.use(nodeSass({
-//   src: path.join(__dirname, 'sass'),
-//   dest: path.join(__dirname, 'public'),
-//   debug: true;
-//   outputStyle: 'compressed'
-// }));
-
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
