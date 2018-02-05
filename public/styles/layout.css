@@ -17,6 +17,7 @@ body @media (min-width: 992px) {
 body {
   margin: 0;
   color: #244751;
+  height: auto;
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -26,7 +27,6 @@ main {
   margin: auto;
   padding-top: 130px;
   width: 450px;
-  height: -webkit-fill-available;
   padding-bottom: 130px;
   color: grey;
   background-color: white;
