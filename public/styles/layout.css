@@ -26,7 +26,7 @@ main {
   margin: auto;
   padding-top: 130px;
   width: 450px;
-  height: 100%;
+  height: -webkit-fill-available;
   padding-bottom: 130px;
   color: grey;
   background-color: white;
