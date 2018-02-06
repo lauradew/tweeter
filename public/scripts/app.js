@@ -1,5 +1,5 @@
-
 function createTweetElement(tweetObject) {
+  //creating necessary elements
   const header = $("<header>");
   const article = $("<article>");
   const footer = $("<footer>");
@@ -13,7 +13,7 @@ function createTweetElement(tweetObject) {
   const retweer = $("<i>").addClass("fa fa-retweet");
   const heart = $("<i>").addClass("fa fa-heart");
   const daysAgo = moment(tweetObject.created_at).fromNow();
-
+  //building header
   article.append(header);
   avatar.attr('src', tweetObject.user.avatars.small);
   header.append(avatar);
@@ -21,8 +21,10 @@ function createTweetElement(tweetObject) {
   header.append(name);
   tag.text(tweetObject.user.handle);
   header.append(tag);
+  //building tweet content
   cont.text(tweetObject.content.text);
   article.append(cont);
+  //building footer
   article.append(footer);
   date.text("Posted " + daysAgo + ".");
   footer.append(date);
@@ -35,6 +37,7 @@ function createTweetElement(tweetObject) {
 }
 
 $(document).ready(function() {
+  //get tweets from server
   function loadTweets() {
     $.ajax({
       url: '/tweets',
@@ -46,19 +49,20 @@ $(document).ready(function() {
   }
   loadTweets();
 
+  //append tweets from server to page
   function renderTweets(tweets) {
     tweets.forEach(function(tweet) {
       $('#tweets-container').prepend(createTweetElement(tweet));
     });
   }
-
+  //function to flash error message for 4 seconds
   function flashMessage(message) {
     $("#flash").text(message);
     setTimeout(function() {
       $("#flash").text("");
     }, 4000);
   }
-
+  //take elements of tweet to send to POST
   $('.new-tweet form').on('submit', function(e) {
     e.preventDefault();
     const newtext = $(this).find(".textarea").val().trim();
@@ -70,7 +74,7 @@ $(document).ready(function() {
       return;
     } else {
       const newest = $('.new-tweet form').serialize();
-
+      //POST to server, reset text body and char count
       $.post('/tweets', newest).done(function() {
         $('.textarea').val("");
         $('.counter').text("140");
@@ -78,6 +82,4 @@ $(document).ready(function() {
       });
     }
   });
-
 });
-

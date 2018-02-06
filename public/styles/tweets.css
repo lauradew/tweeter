@@ -21,7 +21,6 @@ article p {
   display: inline-block;
   padding-left: 1em;
   padding-right: 1em;
-
 }
 
 article header {
@@ -32,7 +31,6 @@ article header {
   width: 100%;
   height: 67px;
 }
-
 
 img.userAv {
   display: inline-block;
@@ -50,7 +48,6 @@ p.fullName {
   font-weight: 700;
   font-size: 150%;
 }
-
 
 p.userat {
   position: absolute;
@@ -80,4 +77,3 @@ p.icons {
   float: right;
   visibility: hidden;
 }
-

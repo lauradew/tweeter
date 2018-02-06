@@ -22,7 +22,6 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-
 main {
   margin: auto;
   padding-top: 130px;
@@ -30,4 +29,11 @@ main {
   padding-bottom: 130px;
   color: grey;
   background-color: white;
+}
+
+#flash {
+  color: red;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
 }
